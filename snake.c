@@ -118,8 +118,7 @@ void carregarJogo()
 {
     system("cls");
     printf("Nome do jogador?\n");
-    scanf("%
-    [^\n]s", &jogador);
+    scanf("%[^\n]s", &jogador);
     system("cls");
     printf("Aguarde o jogo ser carregado...\n");
     char load[11] = "carregando";
@@ -143,9 +142,13 @@ void mostrarLimitesMatriz(void)
     {
         for (int j = 0; j < 39; ++j)
         {
-            if ((j == 0) || (i == 0) || (i == 11) || (j == 38))
+            if ((i == 11)||(i == 0))
             {
-                printf("#");
+                printf("_");
+            }
+            else if ((j == 38) || (j == 0))
+            {
+                printf("|");
             }
             else
             {
@@ -226,7 +229,7 @@ void jogarCobrinha(int nivel)
     cobraPosicaoX[0] = (rand() % 37) + 1;
     cobraPosicaoY[0] = (rand() % 10) + 1;
     irColunaLinha(cobraPosicaoX[0], cobraPosicaoY[0]);
-    printf("%c", 'X');
+    printf("%c", 'C');
 
     ch = get_code();
     while (ch != KEY_ESC)
@@ -293,7 +296,8 @@ void jogarCobrinha(int nivel)
         apagarCauda(cobraPosicaoX, cobraPosicaoY, tamanhoCobra);
 
         irColunaLinha(cobraPosicaoX[0], cobraPosicaoY[0]);
-        printf("%c", 'X');
+        printf("%c", 'X'
+        );
 
         irColunaLinha(0, 12);
         printf("Pontos: %d - %s", pontos, jogador);
@@ -308,7 +312,7 @@ void jogarCobrinha(int nivel)
         }
 
         irColunaLinha(PontoPosicaoX, PontoPosicaoY);
-        printf("%c", 'c');
+        printf("%c", 'O');
     }
 
     getch();
