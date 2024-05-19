@@ -7,7 +7,10 @@
 #include "timer.h"
 #include "paineis.h"
 #define Max 100000
-int pontuação;
+
+int pontuação = 0;
+int record = 0;
+
 int snakeX[Max];
 int snakeY[Max];
 int snakeLength = 1;
@@ -17,11 +20,32 @@ int gameRunning = 1; // Variável global para controlar o estado do jogo
 float difficulty = 0;
 char nome[100];
 
+// ver o record
+void record(){
+    FILE *file = fopen("record.txt","r");
+    if file {
+        fscanf(file, "%d", &record);
+    fclose(file);
+    }
+}
+
+//salvar o record novo
+void novorecord(){
+    FILE *file = fopen("record.txt","w");
+    if file{
+        fprint(file, "%d", record);
+    fclose(file);
+    }
+}
+
 void initializeGame() {
     screenInit(0);
     keyboardInit();
     timerInit(100/difficulty); // Ajusta a velocidade do jogo com base na dificuldade
-
+    pontuacao = 0;
+    record();
+    //loadScore();
+    
     // Inicializa a cobrinha no meio da tela
     snakeX[0] = MAXX / 2;
     snakeY[0] = MAXY / 2;
@@ -54,7 +78,7 @@ void drawMap() {
         screenGotoxy(MAXX, i);
         printf(" ");
     }
-    printf("\n\t\t\t\tPontuação: %d", pontuação);
+    printf("\n\t\t\t\tPontuação: %d     Record: %d", pontuação, record);
 }
 
 void drawSnake() {
@@ -99,7 +123,11 @@ void moveSnake() {
     }
     // Verifica se a cobrinha colidiu com a parede ou com ela mesma
     if (nextX <= MINX || nextX >= MAXX || nextY <= MINY || nextY >= MAXY) {
-        gameRunning = 0; // O jogo termina se a cobrinha colidir com a parede
+        gameRunning = 0; 
+        if (pontuacao > record){
+            record = pontuacao;
+            novorecord();
+        }// O jogo termina se a cobrinha colidir com a parede
         manter_loop();
         return;
     }
@@ -109,6 +137,10 @@ void moveSnake() {
         //caso ela tenha comido a fruta ele vai gerar uma nova fruta randomicamente no mapa
         //e vai garantir que a fruta é gerada fora da parede
         pontuação++;
+        if(pontuacao > record){
+            record = pontuacao;
+            novorecod();
+        }
         foodX = rand() % (MAXX -3)+1;
         foodY = rand() % (MAXY -3)+1;
         if(foodX == MAXX || foodX == MINX||foodY == MAXY||foodY == MINY){
