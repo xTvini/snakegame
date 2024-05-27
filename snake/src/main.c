@@ -75,7 +75,7 @@ void initializeGame() {
         foodX = rand() % (MAXX - 3) + 1;
         foodY = rand() % (MAXY - 3) + 1;
     }
-    snakeDirection = 0;
+    snakeDirection = 1;
 }
 void drawSnake() {
     screenSetColor(BLACK, GREEN);
