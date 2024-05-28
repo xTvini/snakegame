@@ -1,13 +1,13 @@
 # SnakeGame - Projeto de PIF do 2º Período
 
- - [Descrição](#descrição)
+- [Descrição](#descrição)
 - [Instalação](#instalação)
 - [Controles](#controles)
 - [Funcionalidades Extras](#funcionalidades-extras)
 - [Créditos](#créditos)
 
 ## Descrição
-Um clássico jogo da cobrinha desenvolvido em C com funcionalidades extras. O objetivo é guiar a cobra pelo tabuleiro para comer frutas que aparecem aleatoriamente. Cada fruta consumida faz a cobra crescer, aumentando a dificuldade do jogo. O jogo termina se a cobra colidir com as paredes. Teste seus reflexos e veja quanto tempo você consegue sobreviver enquanto a cobra continua a crescer!
+Um clássico jogo da cobrinha desenvolvido em C com funcionalidades extras. O objetivo é guiar a cobra pelo tabuleiro para comer frutas que aparecem aleatoriamente. Cada fruta consumida faz a cobra crescer, aumentando a dificuldade do jogo. O jogo termina se a cobra colidir com as paredes. Você pode competir com seus amigos para ver quem consegue a maior pontuação! Cada vez que você joga, sua pontuação é registrada em um ranking. Teste seus reflexos, desafie seus amigos e veja quanto tempo você consegue sobreviver enquanto a cobra continua a crescer! 
 
 ## Instalação
 ### Pré-requisitos
