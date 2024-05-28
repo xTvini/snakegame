@@ -27,13 +27,13 @@ Um clássico jogo da cobrinha desenvolvido em C com funcionalidades extras. O ob
     ```
 3. Compile o código:
     ```sh
-    gcc -o SnakeGame main.c -lncurses
+    gcc -I./include src/*.c -o main
     ```
     
 ### Execução
 Para jogar, execute o arquivo compilado:
 ```sh
-./SnakeGame
+./main
 ```
 
 ## Como Jogar
