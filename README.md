@@ -1,9 +1,7 @@
 # SnakeGame - Projeto de PIF do 2º Período
-Um clássico jogo da cobrinha desenvolvido em C com funcionalidades extras. Controle a cobra enquanto ela se move pelo tabuleiro, comendo frutas para crescer e aumentando sua pontuação. Este jogo simples e divertido desafia seus reflexos e habilidades de planejamento, agora com novos recursos para uma experiência ainda mais empolgante!
 
  - [Descrição](#descrição)
 - [Instalação](#instalação)
-- [Como Jogar](#como-jogar)
 - [Controles](#controles)
 - [Funcionalidades Extras](#funcionalidades-extras)
 - [Créditos](#créditos)
@@ -36,9 +34,6 @@ Para jogar, execute o arquivo compilado:
 ./main
 ```
 
-## Como Jogar
-Guie a cobra pelo tabuleiro para comer as frutas que aparecem aleatoriamente. Cada fruta consumida faz a cobra crescer, aumentando a dificuldade. Evite colidir com as paredes para não perder. Ao pegar uma fruta, a cobra inverte, trocando a cabeça pelo rabo e o rabo pela cabeça, e a direção do movimento também se inverte. Por exemplo, se a cobra pegar uma fruta enquanto está se movendo para cima, ela começará a se mover para baixo após a inversão.
-
 ## Controles
 - **Tecla W**: Mover para cima
 - **Tecla S**: Mover para baixo
@@ -48,7 +43,7 @@ Guie a cobra pelo tabuleiro para comer as frutas que aparecem aleatoriamente. Ca
 
 ## Funcionalidades Extras
 - **Níveis de dificuldade**: Escolha entre fácil, médio e difícil, ajustando a velocidade da cobra.
-- **Inversão da cobra**: Sempre que a cobra pega uma fruta, ela inverte, trocando a cabeça pelo rabo e o rabo pela cabeça, e a direção do movimento também se inverte.
+- **Inversão da cobra**: Sempre que a cobra pega uma fruta, ela inverte, trocando a cabeça pelo rabo e o rabo pela cabeça, e a direção do movimento também se inverte. Por exemplo, se a cobra pegar uma fruta enquanto está se movendo para cima, ela começará a se mover para baixo após a inversão.
 
 ## Créditos
 - **Kauane Melo** - [KauaneMelo](https://github.com/KauaneMelo)
