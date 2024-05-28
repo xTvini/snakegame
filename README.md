@@ -21,7 +21,8 @@ Um clássico jogo da cobrinha desenvolvido em C com funcionalidades extras. O ob
     ```
 2. Navegue até o diretório do projeto:
     ```sh
-    cd repositorio-SnakeGame
+    cd snakegame
+    cd snake
     ```
 3. Compile o código:
     ```sh
@@ -39,7 +40,7 @@ Para jogar, execute o arquivo compilado:
 - **Tecla S**: Mover para baixo
 - **Tecla A**: Mover para a esquerda
 - **Tecla D**: Mover para a direita
-- **Tecla ESC**: Pausar/Sair do jogo
+- **Tecla ESC**: Sair do jogo
 
 ## Funcionalidades Extras
 - **Níveis de dificuldade**: Escolha entre fácil, médio e difícil, ajustando a velocidade da cobra.
