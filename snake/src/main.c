@@ -104,6 +104,7 @@ void moveSnake() {
     }
     if (nextX <= MINX || nextX >= MAXX || nextY <= MINY-1 || nextY >= MAXY-1) {
         gameRunning = 0;
+        PERDEU();
         add(&head, pontuação, nome);
         escrever(head);
         pontuação = 0;
@@ -111,6 +112,7 @@ void moveSnake() {
     }
     if (snakeLength == MAXX * MAXY) {
         screenClear();
+        GANHOU();
         add(&head, pontuação, nome);
         escrever(head);
         pontuação = 0;
@@ -119,8 +121,8 @@ void moveSnake() {
     }
     if (nextX == foodX && nextY == foodY) {
         pontuação++;
-        foodX = rand() % (MAXX - 3) + 1;
-        foodY = rand() % (MAXY - 3) + 1;
+        foodX = rand() % (MAXX);
+        foodY = rand() % (MAXY) + 1;
         if (foodX == MAXX || foodX == MINX || foodY == MAXY || foodY == MINY) {
             foodX = rand() % (MAXX - 3) + 1;
             foodY = rand() % (MAXY - 3) + 1;
